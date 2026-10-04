@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>/privacy — 正文流预览（LogoFade）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{ --background:#f9fbfa; --foreground:#111d1a; --muted:#576b66; }
+  body{ background:var(--background); color:var(--foreground);
+        font-family:"Geist",ui-sans-serif,system-ui,sans-serif;
+        -webkit-font-smoothing:antialiased; margin:0; }
+  .wrap{ max-width:672px; margin:0 auto; padding:40px 16px; }
+  section{ margin-top:56px; }
+  section:first-child{ margin-top:0; }
+  h2{ font-size:1.5rem; font-weight:700; letter-spacing:-0.025em; margin:0; }
+  .body{ margin-top:24px; }
+  .body > * + *{ margin-top:16px; }
+  p{ line-height:1.75; margin:0; }
+  /* 以下三行对应 spec「待我确认」中的现网值，仅用于预览效果 */
+  a{ text-decoration:underline; text-underline-offset:4px; color:inherit; }
+  ul{ list-style:disc; padding-left:24px; margin:0; }
+  li{ margin-top:8px; line-height:1.75; }
+  code{ font-family:"Geist Mono",ui-monospace,monospace; font-size:0.9em; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+
+    <section>
+      <h2>Your images stay on your device</h2>
+      <div class="body">
+        <p>When you choose an image, it is opened, processed and saved by code running in your own browser. The image is not uploaded to our servers or to anyone else&rsquo;s. We never receive it, so we cannot view it, store it or share it.</p>
+        <p>The removal code is downloaded to your browser the first time you pick a file. Nothing about your image travels the other way. The image and the result exist only in the open page, and they are gone when you close the tab or choose another image.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What we do not collect</h2>
+      <div class="body">
+        <p>LogoFade has no accounts. We do not ask for your name, email address, password or payment details, and the site has nowhere to enter them. The only way we learn your email address is if you write to us.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Analytics</h2>
+      <div class="body">
+        <p>We use Google Analytics 4, a service provided by Google, to understand how many people visit and whether the tool is working for them. Google Analytics receives:</p>
+        <ul>
+          <li>Its standard events, such as page views, the start of a visit, scrolling, and clicks on links to other sites.</li>
+          <li>Technical details sent with those events: the page address and the page you came from, your browser and device type, screen size and language, and an approximate location (country and city) that Google derives from your IP address. Google Analytics 4 does not log or store the IP address itself.</li>
+          <li>One event of our own, <code>watermark_remove</code>, sent each time the tool analyses an image. It carries two values and nothing else. <code>result</code> is the outcome: <code>OK</code>, <code>OK_DARK_AREA</code>, or the reason no result was given (<code>INVALID_INPUT</code>, <code>IMAGE_TOO_SMALL</code>, <code>WATERMARK_NOT_FOUND</code>, <code>ALPHA_MISMATCH</code>, <code>SCALED_INPUT</code>, <code>RESIDUAL_TOO_HIGH</code>, <code>LOW_CONFIDENCE_DARK</code> or <code>CANVAS_BLOCKED</code>). <code>anchor</code> says which known Gemini watermark layout was matched, for example <code>96/96/native</code>.</li>
+        </ul>
+        <p>That event never contains the image, any part of it, its file name or its dimensions. We use it for one purpose: a sudden rise in failures tells us that Gemini has changed its watermark.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cookies and your choice</h2>
+      <div class="body">
+        <p>Google Analytics can set two cookies in your browser, <code>_ga</code> and one whose name starts with <code>_ga_</code>. They hold a random identifier that lets Google Analytics tell one visitor and one visit from another. Each cookie stays in your browser for up to two years unless you delete it or reject analytics cookies. Whether they are set depends on where you are and what you choose:</p>
+        <ul>
+          <li>If your browser&rsquo;s time zone is in the European Economic Area, the United Kingdom or Switzerland, analytics cookies are off until you choose &ldquo;Accept all&rdquo; in the banner. If you choose &ldquo;Reject all&rdquo;, or do not answer, no analytics cookies are set. Google Analytics then still receives the events described above, but without cookies and without an identifier that links them to you or to each other.</li>
+          <li>Everywhere else, analytics cookies are on by default.</li>
+          <li>Wherever you are, you can change or withdraw your choice at any time with the &ldquo;Cookie settings&rdquo; button at the bottom of every page. Choosing &ldquo;Reject all&rdquo; there also deletes the Google Analytics cookies this site has already set.</li>
+        </ul>
+        <p>We work out the region from your browser&rsquo;s time zone setting, in your browser. Your choice is saved in your browser&rsquo;s local storage under the name <code>cookie-consent</code>. It is not a cookie and it is not sent to us.</p>
+        <p>We do not use advertising cookies and we do not show ads. The advertising settings of Google Analytics are switched off for every visitor. Google also offers a <a href="https://tools.google.com/dlpage/gaoptout">browser add-on that opts you out of Google Analytics</a> on all websites.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How long analytics data is kept</h2>
+      <div class="body">
+        <p>These are two separate periods. The cookies described above live in your own browser for up to two years. The data Google Analytics holds on its servers about individual visits and events is kept for 14 months and then deleted automatically. Totals and other aggregated statistics that do not relate to an individual visitor are not subject to that limit.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Hosting</h2>
+      <div class="body">
+        <p>The site is served through Vercel and Cloudflare. Like any web server, they receive your IP address and basic browser details with each request in order to deliver the page, and they may keep short-lived logs to keep the service secure and reliable. We do not use those logs to identify you.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who receives data</h2>
+      <div class="body">
+        <p>Google (analytics), Vercel and Cloudflare (hosting and delivery) process the data described above on our behalf, and may do so in the United States and other countries. We do not sell data, and we do not share it with anyone else.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Your rights</h2>
+      <div class="body">
+        <p>Depending on where you live, you may have the right to ask what data is held about you, to have it deleted, or to object to its use. Because there are no accounts, we hold nothing that identifies you by name. The practical controls are the &ldquo;Cookie settings&rdquo; button and clearing this site&rsquo;s cookies in your browser. For anything else, write to us at the address below.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <div class="body">
+        <p>LogoFade is not directed at children under 13, and we do not knowingly collect personal information from children. The tool works without anyone giving us personal information.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <div class="body">
+        <p>If the way the site handles data changes, we will update this page and the date at the top before the change takes effect.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <div class="body">
+        <p>Questions about this policy: <a href="mailto:support@logofade.com">support@logofade.com</a>. See also our <a href="/terms">Terms of Service</a>.</p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
