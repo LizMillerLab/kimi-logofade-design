@@ -74,6 +74,7 @@
 - section 之间：`mt-14`
 - 标题与内容之间：`mt-6`；卡与卡之间：`gap-6`；文本块之间：`space-y-4`
 - 段落之间：`mt-4`；H2 后首段：`mt-6`；列表上方：`[&_ul]:mt-4`
+- **正文间距不要用 `space-y-*`，一律写在 Prose 里**（如 `[&_p]:mt-4`、`[&_ul]:mt-4`）；`space-y-*` 只用于非正文的块级堆叠（如 FAQ 卡片串）
 
 ## 5. 文字
 
@@ -92,7 +93,7 @@
 | 无序列表 | `ul: list-disc pl-6 mt-4`；`li: mt-2 leading-7`（现网值收编，列表上方间距定稿 `mt-4`） |
 
 **⚠️ 字号是标准，padding 是局部的事——要压高度就调 `padding`，不要动字号。**
-**⚠️ `font-bold` 只允许出现在价格数字上，任何标题都不得使用。**
+**⚠️ `font-bold` 只允许出现在价格数字上；全站标题一律 `font-semibold`（含 H1、H2），任何标题都不得使用 `font-bold`。**
 
 ## 6. 图标
 
@@ -114,6 +115,8 @@
 | 品牌主按钮 | `rounded-full bg-foreground px-5 py-2.5 text-base font-medium text-background` | `inline-flex items-center justify-center gap-2` |
 | 描边按钮 | `rounded-full bg-card px-5 py-2.5 text-base font-medium text-foreground ring-1 ring-border` | `inline-flex items-center justify-center gap-2` |
 | 大号（hero CTA） | `rounded-full bg-foreground px-7 py-3.5 text-lg font-medium text-background` | `inline-flex items-center justify-center gap-2` |
+
+上表基础尺寸（`px-5 py-2.5 text-base`）仅适用于主按钮与描边按钮；大号按本行取值。
 
 - 旧的 `h-11` / `rounded-lg` / `text-sm` / `font-semibold` 按钮写法**全部作废**。
 - 主按钮为深色（`bg-foreground`）：`accent-teal` 在白底上不显形、在浅绿外框里会撞色，**不得用于按钮底色**。

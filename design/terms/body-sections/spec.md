@@ -20,7 +20,7 @@
 | 每个 H2 段落容器 | mt-14（手册「section 之间」档） |
 | H2 | text-2xl font-semibold tracking-tight（手册「H2 全站」定稿档，font-bold 已作废） |
 | 段内正文 <p> | leading-7 text-foreground（手册全站标准正文） |
-| 段内文本块间距 | space-y-4（手册「文本块之间」档），包在 H2 之后的内容容器上 |
+| 段内正文间距 | 写在 Prose：`[&_p]:mt-4`、`[&_ul]:mt-4`（不用 space-y-* 管正文间距，手册 §4 定稿） |
 | H2 与其正文间距 | mt-6（手册「标题与内容之间」档） |
 | 链接 <a>（Privacy、Contact 两段） | underline underline-offset-4（手册已收编） |
 
