@@ -17,7 +17,7 @@
 ## 元素规格
 | 元素 | class（照 CONTRIBUTING.md 取值） |
 |---|---|
-| H1「Terms of Service」 | text-4xl font-bold tracking-tight |
+| H1「Terms of Service」 | text-3xl font-semibold tracking-tight sm:text-4xl（手册「法律页 H1」定稿档） |
 | 更新日期行「Last updated: October 1, 2026」 | mt-6 font-mono text-sm text-muted-foreground（手册「编号 / 小标签」档） |
 | 引言段（「These terms apply…」整段） | 浅绿卡：rounded-2xl bg-accent-teal/6 p-6 ring-1 ring-accent-teal/25 ring-inset；卡内文字 mt-0 text-lg leading-8 text-foreground（手册「开场白」字号档） |
 | 引言卡与上方日期行间距 | mt-6（手册「标题与内容之间」档） |

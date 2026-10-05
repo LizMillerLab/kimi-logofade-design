@@ -18,12 +18,12 @@
 | 元素 | class（照 CONTRIBUTING.md 取值） |
 |---|---|
 | 每个 H2 段落容器 | mt-14（手册「section 之间」档） |
-| H2 | text-2xl font-bold tracking-tight |
+| H2 | text-2xl font-semibold tracking-tight（手册「H2 全站」定稿档，font-bold 已作废） |
 | 段内正文 <p> | leading-7 text-foreground（手册全站标准正文） |
 | 段内文本块间距 | space-y-4（手册「文本块之间」档），包在 H2 之后的内容容器上 |
 | H2 与其正文间距 | mt-6（手册「标题与内容之间」档） |
 | 链接 <a> | underline underline-offset-4（手册已收编） |
-| 无序列表 <ul>/<li>（Analytics、Cookies 两段） | ul: list-disc pl-6 mt-3；li: mt-2 leading-7（手册已收编） |
+| 无序列表 <ul>/<li>（Analytics、Cookies 两段） | ul: list-disc pl-6 mt-4；li: mt-2 leading-7（列表上方间距定稿 mt-4，手册已收编） |
 | 行内代码 <code> | font-mono text-[0.9em]（手册已收编） |
 
 ## 新增文字（纯视觉替换时这节写「无」）

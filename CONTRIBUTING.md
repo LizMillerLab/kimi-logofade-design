@@ -24,6 +24,14 @@
 | `bg-accent-teal/18` | `#6efcd92e` | hero 上传区外框 |
 | `ring-accent-teal/25` | `#6efcd940` | **只用于内描边**，不做底色 |
 
+### 补充登记（只有这几条，不得类推出新档位）
+
+| 写法 | 定稿用途 |
+|---|---|
+| `accent-teal` 实心档（无透明度） | 仅用于**不含文字**的填充与描边（进度条填充、推荐档 `ring-2`），**不得承载文字** |
+| `border-accent-teal/25` | 归入 25 档 = 细描边（`ring` / `border` 均可） |
+| `bg-foreground/5` | 中性提示底（警告条等）；**品牌提示不得使用**（品牌提示用 `accent-teal/6`） |
+
 ### ⚠️ 硬规则
 
 - **`accent-teal` 绝不当文字色**——亮薄荷在白底上对比度约 1.2:1，读不了。
@@ -65,13 +73,15 @@
 - 两栏：`grid gap-6 lg:grid-cols-2`（等宽）/ 上面的 `minmax` 写法（不等宽）
 - section 之间：`mt-14`
 - 标题与内容之间：`mt-6`；卡与卡之间：`gap-6`；文本块之间：`space-y-4`
+- 段落之间：`mt-4`；H2 后首段：`mt-6`；列表上方：`[&_ul]:mt-4`
 
 ## 5. 文字
 
 | 元素 | class |
 |---|---|
-| H1 | `text-4xl font-bold tracking-tight`（首页 H1 即主关键词） |
-| H2 | `text-2xl font-bold tracking-tight` |
+| 首页 H1 | `text-4xl leading-tight font-semibold tracking-tight sm:text-5xl lg:text-6xl`（首页 H1 即主关键词） |
+| 法律页 H1 | `text-3xl font-semibold tracking-tight sm:text-4xl` |
+| H2（全站） | `text-2xl font-semibold tracking-tight` |
 | H3（卡内标题） | `text-lg font-semibold text-foreground` |
 | 正文 | `leading-7 text-foreground`（16px，**全站标准，不许改**） |
 | 次要 / 说明 | `text-sm text-muted-foreground` |
@@ -79,9 +89,10 @@
 | 编号 / 小标签 | `font-mono text-sm text-foreground`（或 `text-muted-foreground`） |
 | 链接 `<a>` | `underline underline-offset-4`（现网值原样收编） |
 | 行内代码 `<code>` | `font-mono text-[0.9em]`（现网值原样收编） |
-| 无序列表 | `ul: list-disc pl-6 mt-3`；`li: mt-2 leading-7`（现网值原样收编） |
+| 无序列表 | `ul: list-disc pl-6 mt-4`；`li: mt-2 leading-7`（现网值收编，列表上方间距定稿 `mt-4`） |
 
 **⚠️ 字号是标准，padding 是局部的事——要压高度就调 `padding`，不要动字号。**
+**⚠️ `font-bold` 只允许出现在价格数字上，任何标题都不得使用。**
 
 ## 6. 图标
 
@@ -95,3 +106,23 @@
   绝不许用 `<h4>`~`<h6>`**——会污染标题结构。
 - 卡片列表用 `<ul>` + `<li>`（无序）或 `<ol>` + `<li>`（有序），**不要用裸 `<div>` 装 `<li>`**。
 - 图标内联，不引入依赖。
+
+## 8. 按钮（形状与颜色写一串，布局另给一串）
+
+| 类型 | class | 布局 |
+|---|---|---|
+| 品牌主按钮 | `rounded-full bg-foreground px-5 py-2.5 text-base font-medium text-background` | `inline-flex items-center justify-center gap-2` |
+| 描边按钮 | `rounded-full bg-card px-5 py-2.5 text-base font-medium text-foreground ring-1 ring-border` | `inline-flex items-center justify-center gap-2` |
+| 大号（hero CTA） | `rounded-full bg-foreground px-7 py-3.5 text-lg font-medium text-background` | `inline-flex items-center justify-center gap-2` |
+
+- 旧的 `h-11` / `rounded-lg` / `text-sm` / `font-semibold` 按钮写法**全部作废**。
+- 主按钮为深色（`bg-foreground`）：`accent-teal` 在白底上不显形、在浅绿外框里会撞色，**不得用于按钮底色**。
+
+## 9. 定价页（登记）
+
+| 路径 | 说明 |
+|---|---|
+| `/pricing` | 独立静态路径，零 `"use client"`。**备注：此路径需在开工定价页时同步修订 CLAUDE.md §7 的措辞与 sitemap 基线** |
+| `/pricing/annual` | 独立静态路径（年付），零 `"use client"`，多一个可收录 URL |
+
+- 不做月/年切换：两个独立静态路径，页内不挂交互开关。

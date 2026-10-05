@@ -18,7 +18,7 @@
 | 元素 | class（照 CONTRIBUTING.md 取值） |
 |---|---|
 | 每个 H2 段落容器 | mt-14（手册「section 之间」档） |
-| H2 | text-2xl font-bold tracking-tight |
+| H2 | text-2xl font-semibold tracking-tight（手册「H2 全站」定稿档，font-bold 已作废） |
 | 段内正文 <p> | leading-7 text-foreground（手册全站标准正文） |
 | 段内文本块间距 | space-y-4（手册「文本块之间」档），包在 H2 之后的内容容器上 |
 | H2 与其正文间距 | mt-6（手册「标题与内容之间」档） |
