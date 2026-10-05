@@ -1,73 +1,24 @@
-# React + TypeScript + Vite
+# kimi-logofade-design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[logofade.com](https://logofade.com) 的设计仓。这里不写实现代码，只产出设计规格，供写代码的 AI 直接照做。
 
-Currently, two official plugins are available:
+## 仓库里有什么
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| 路径 | 作用 | 给谁看 |
+|---|---|---|
+| `CONTRIBUTING.md` | **设计规则手册**：色板、卡片、宽度、字号、间距、图标、结构语义——所有可用设计 token 的唯一来源 | 人 + AI 共同遵守 |
+| `design.md` | 设计系统 tokens 速查（与手册同源） | 人 |
+| `design/<页面>/<区块>/spec.md` | **每个页面每个区块一份规格表**（覆盖范围 / 布局 / 元素规格 / 新增文字 / 原文保留声明 / 结构影响 / 待确认） | 写代码的 AI 的唯一输入 |
+| `design/<页面>/<区块>/preview.html` | 静态预览 | 只给人看效果，不作为实现依据 |
 
-## React Compiler
+## 规则（每份 spec 都必须遵守）
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 只用 `CONTRIBUTING.md` 里有的值；手册没有的 → 写进 spec 的「待确认」，**不就地发明**新颜色、新圆角、新间距。
+- spec 不改任何文案；新增的编号 / 标签 / 徽章等装饰文字只能用 `<p>` / `<span>` / `<div>`，绝不用 `<h4>`~`<h6>`。
+- `accent-teal`（#6efcd9）绝不当文字色，只用于背景 / 边框 / 描边 / 装饰。
 
-## Expanding the ESLint configuration
+## 当前进度
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 首页中间区块重设计（reverse alpha 讲解区 + Privacy 区）：见 `src/`（React 预览工程，`npm install && npm run dev` 可看效果）
+- `/privacy`：`design/privacy/page-header`、`design/privacy/body-sections`
+- `/terms`：`design/terms/page-header`、`design/terms/body-sections`

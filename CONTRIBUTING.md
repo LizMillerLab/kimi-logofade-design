@@ -37,7 +37,7 @@
 
 | 类型 | class | 场景 |
 |---|---|---|
-| **浅绿卡**（主力） | `rounded-2xl bg-accent-teal/6 p-6 ring-1 ring-accent-teal/25 ring-inset` | How to / Works with / 讲解三卡 |
+| **浅绿卡**（主力） | `rounded-2xl bg-accent-teal/6 p-6 ring-1 ring-accent-teal/25 ring-inset` | How to / Works with / 讲解三卡 / 法律页引言摘要 |
 | **白色实心卡** | `rounded-2xl bg-card p-6 shadow-sm ring-1 ring-border` | 内容对比、Privacy 双栏 |
 | **大块容器** | `rounded-3xl sm:p-8` | 大段落的横向长条 |
 
@@ -53,6 +53,7 @@
 | 长文（法律页） | `mx-auto max-w-2xl` | 672px，约 75 字符/行 |
 | 长文中「不要太宽」的单段 | 段内包一层 `max-w-2xl` | 如 H2 下的开场白 |
 | 双栏（文本 + 侧栏） | `lg:grid-cols-[minmax(0,1fr)_340px]` | Privacy 段 |
+| 法律页外壳 | `py-10 sm:py-16` | 页面上下 padding（现网值原样收编） |
 
 - **`minmax(0,1fr)` 不能写成 `1fr`**——否则长文本会把列顶破。
 - **不要加 `lg:items-center`**：等高交给 grid 默认的 stretch。
@@ -76,6 +77,9 @@
 | 次要 / 说明 | `text-sm text-muted-foreground` |
 | 开场白（H2 下） | `mt-4 max-w-2xl text-lg leading-8` |
 | 编号 / 小标签 | `font-mono text-sm text-foreground`（或 `text-muted-foreground`） |
+| 链接 `<a>` | `underline underline-offset-4`（现网值原样收编） |
+| 行内代码 `<code>` | `font-mono text-[0.9em]`（现网值原样收编） |
+| 无序列表 | `ul: list-disc pl-6 mt-3`；`li: mt-2 leading-7`（现网值原样收编） |
 
 **⚠️ 字号是标准，padding 是局部的事——要压高度就调 `padding`，不要动字号。**
 
