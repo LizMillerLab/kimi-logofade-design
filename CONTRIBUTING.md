@@ -62,6 +62,7 @@
 | 长文（法律页） | `mx-auto max-w-2xl` | 672px，约 75 字符/行 |
 | 长文中「不要太宽」的单段 | 段内包一层 `max-w-2xl` | 如 H2 下的开场白 |
 | 双栏（文本 + 侧栏） | `lg:grid-cols-[minmax(0,1fr)_340px]` | Privacy 段 |
+| FAQ 卡片串容器 | `mx-auto max-w-3xl` | 768px，与首页一致（纯文本卡片串不要用 1152px，一行会超过 100 字符） |
 | 法律页外壳 | `py-10 sm:py-16` | 页面上下 padding（现网值原样收编） |
 | 内页 H1 区 | `mx-auto max-w-2xl` + 外壳 `py-10 sm:py-16` | H1 + 浅绿卡首段 + 按钮组的整体版式（/google-flow-watermark-remover） |
 
@@ -97,6 +98,7 @@
 | 无序列表 | `ul: list-disc pl-6 mt-4`；`li: mt-2 leading-7`（现网值收编，列表上方间距定稿 `mt-4`） |
 
 **⚠️ 字号是标准，padding 是局部的事——要压高度就调 `padding`，不要动字号。**
+**⚠️ 卡内正文（卡片里的 `<p>`）同样用 16px `leading-7`；首页三卡现网 `text-sm leading-6`（14px）属未登记的旧写法，逐步收编，新页面一律用 16px。**
 **⚠️ `font-bold` 只允许出现在价格数字上；全站标题一律 `font-semibold`（含 H1、H2），任何标题都不得使用 `font-bold`。**
 
 ## 6. 图标
@@ -129,7 +131,7 @@
 
 | 页面 | 结构 | 备注 |
 |---|---|---|
-| `/google-flow-watermark-remover` | 六块：H1 区 / How to / 能力边界 / Works with / FAQ / Prose；H1 1 / H2 5 / H3 12 / details 4 | 能力边界用等宽两栏 + 白卡，**无 ✓/✗ 图标**（圆点列表，靠 H3 区分）；规格见 `design/google-flow-watermark-remover/body-sections/` |
+| `/google-flow-watermark-remover` | 六块：H1 区 / How to / 能力边界 / Works with / FAQ / Prose；H1 1 / H2 5 / H3 12 / details 4 | 能力边界用等宽两栏 + 白卡，**无 ✓/✗ 图标**（圆点列表，靠 H3 区分）；FAQ 容器 768px（非 1152px）；H1 区与 Prose 用 672px 窄栏；规格见 `design/google-flow-watermark-remover/body-sections/` |
 
 ## 9. 定价页（登记）
 
