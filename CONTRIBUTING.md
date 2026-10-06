@@ -62,6 +62,7 @@
 | 长文中「不要太宽」的单段 | 段内包一层 `max-w-2xl` | 如 H2 下的开场白 |
 | 双栏（文本 + 侧栏） | `lg:grid-cols-[minmax(0,1fr)_340px]` | Privacy 段 |
 | 法律页外壳 | `py-10 sm:py-16` | 页面上下 padding（现网值原样收编） |
+| 内页 H1 区 | `mx-auto max-w-2xl` + 外壳 `py-10 sm:py-16` | H1 + 浅绿卡首段 + 按钮组的整体版式（/google-flow-watermark-remover） |
 
 - **`minmax(0,1fr)` 不能写成 `1fr`**——否则长文本会把列顶破。
 - **不要加 `lg:items-center`**：等高交给 grid 默认的 stretch。
@@ -82,6 +83,7 @@
 |---|---|
 | 首页 H1 | `text-4xl leading-tight font-semibold tracking-tight sm:text-5xl lg:text-6xl`（首页 H1 即主关键词） |
 | 法律页 H1 | `text-3xl font-semibold tracking-tight sm:text-4xl` |
+| 内页 H1 | `text-3xl font-semibold tracking-tight sm:text-4xl`（来源法律页 H1，不新增字号档） |
 | H2（全站） | `text-2xl font-semibold tracking-tight` |
 | H3（卡内标题） | `text-lg font-semibold text-foreground` |
 | 正文 | `leading-7 text-foreground`（16px，**全站标准，不许改**） |
@@ -120,6 +122,12 @@
 
 - 旧的 `h-11` / `rounded-lg` / `text-sm` / `font-semibold` 按钮写法**全部作废**。
 - 主按钮为深色（`bg-foreground`）：`accent-teal` 在白底上不显形、在浅绿外框里会撞色，**不得用于按钮底色**。
+
+## 8.5 页面登记
+
+| 页面 | 结构 | 备注 |
+|---|---|---|
+| `/google-flow-watermark-remover` | 六块：H1 区 / How to / 能力边界 / Works with / FAQ / Prose；H1 1 / H2 5 / H3 12 / details 4 | 能力边界用等宽两栏 + 白卡，**无 ✓/✗ 图标**（圆点列表，靠 H3 区分）；规格见 `design/google-flow-watermark-remover/body-sections/` |
 
 ## 9. 定价页（登记）
 

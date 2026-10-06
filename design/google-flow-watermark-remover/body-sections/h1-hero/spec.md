@@ -9,7 +9,7 @@
 | 项 | 值 |
 |---|---|
 | 容器 | mx-auto max-w-2xl（手册「长文」档，672px 窄栏） |
-| 页面外壳 | py-10 sm:py-16（手册「法律页外壳」档复用，见待确认） |
+| 页面外壳 | py-10 sm:py-16（手册「内页 H1 区」档，已登记） |
 | 断点 | 无分栏，单列 |
 | 网格 | 无 |
 | 窄屏 | 单列（与宽屏一致） |
@@ -18,7 +18,7 @@
 ## 元素规格
 | 元素 | class（照 CONTRIBUTING.md 取值） |
 |---|---|
-| H1「Google Flow Watermark Remover」 | text-3xl font-semibold tracking-tight sm:text-4xl（手册「法律页 H1」档，brief 指定） |
+| H1「Google Flow Watermark Remover」 | text-3xl font-semibold tracking-tight sm:text-4xl（手册「内页 H1」档，brief 指定） |
 | 首段（1 个 p，浅绿卡内） | 浅绿卡：rounded-2xl bg-accent-teal/6 p-6 ring-1 ring-accent-teal/25 ring-inset（手册「法律页引言摘要」场景）；卡内文字 text-lg leading-8 text-foreground（手册「开场白」字号档） |
 | 首段卡与按钮组间距 | mt-6（手册「标题与内容之间」档） |
 | 主按钮「Open the image tool」（→ /） | rounded-full bg-foreground px-5 py-2.5 text-base font-medium text-background + inline-flex items-center justify-center gap-2（手册 §8 品牌主按钮） |
@@ -44,4 +44,4 @@
 
 ## 待我确认
 - 按钮组横向间距：建议 `flex flex-wrap gap-4`，`gap-4` 手册未收录，请确认或指定既有值。
-- 页面外壳 `py-10 sm:py-16` 在手册中的已列场景为「法律页外壳」，本页为功能内页（新场景复用），请确认。
+- ~~页面外壳复用~~（已解决：外壳 `py-10 sm:py-16` 随「内页 H1 区」版式登记进手册 §3）
