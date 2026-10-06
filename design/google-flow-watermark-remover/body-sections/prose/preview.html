@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>/google-flow-watermark-remover — Prose 预览（LogoFade）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{ --background:#f9fbfa; --foreground:#111d1a; --muted:#576b66; }
+  body{ background:var(--background); color:var(--foreground);
+        font-family:"Geist",ui-sans-serif,system-ui,sans-serif;
+        -webkit-font-smoothing:antialiased; margin:0; }
+  .wrap{ max-width:672px; margin:0 auto; padding:40px 16px; }
+  h2{ font-size:1.5rem; font-weight:600; letter-spacing:-0.025em; margin:0; }
+  .body p{ line-height:1.75; margin:16px 0 0; }
+  .body p:first-child{ margin-top:24px; }
+  a{ text-decoration:underline; text-underline-offset:4px; color:inherit; }
+  footer{ margin-top:56px; border-top:1px solid #e4e4e7; }
+  .foot-row{ max-width:672px; margin:0 auto; padding:24px 16px;
+             font-size:0.875rem; color:var(--muted); }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <section>
+      <h2>Flow, Veo, Omni and Gemini: which watermark is which</h2>
+      <div class="body">
+        <p>Gemini stamps still images with a pale four-pointed star in the bottom-right corner. That star is drawn at partial transparency over the finished picture, and because its pattern is known, it can be reversed exactly.（正文占位草稿，文案以内容侧定稿为准）</p>
+        <p>Flow, Veo and Omni are Google's video tools. Their exports carry their own marks, and video frames cannot be un-blended the same way a still image can, which is why LogoFade does not process them yet.</p>
+        <p>Separate from any visible mark, Google also embeds SynthID, an invisible watermark, into the file itself. LogoFade never touches SynthID, on images or on video.</p>
+        <p>If what you have is a still image from Gemini, the <a href="/">image tool</a> removes the visible star in your browser, for free.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot-row">LogoFade · Not affiliated with Google.</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>/google-flow-watermark-remover — FAQ 预览（LogoFade）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{ --background:#f9fbfa; --foreground:#111d1a; --card:#fff; --border:#dce5e3; }
+  body{ background:var(--background); color:var(--foreground);
+        font-family:"Geist",ui-sans-serif,system-ui,sans-serif;
+        -webkit-font-smoothing:antialiased; margin:0; }
+  .wrap{ max-width:1152px; margin:0 auto; padding:40px 16px; }
+  h2{ font-size:1.5rem; font-weight:600; letter-spacing:-0.025em; margin:0; }
+  .items{ margin-top:24px; }
+  .items > * + *{ margin-top:16px; }
+  details{ border-radius:1rem; background:var(--card); padding:24px;
+           box-shadow:0 1px 2px rgb(0 0 0 / 0.05), inset 0 0 0 1px var(--border); }
+  summary{ display:flex; align-items:center; justify-content:space-between; gap:16px;
+           cursor:pointer; list-style:none; }
+  summary::-webkit-details-marker{ display:none; }
+  h3{ font-size:1.125rem; font-weight:600; margin:0; }
+  summary svg{ width:20px; height:20px; flex-shrink:0; transition:transform .15s; }
+  details[open] summary svg{ transform:rotate(180deg); }
+  details p{ line-height:1.75; margin:16px 0 0; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <section>
+      <h2>FAQ</h2>
+      <div class="items">
+        <details open>
+          <summary>
+            <h3>How do I remove a watermark from Google Flow AI?</h3>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg>
+          </summary>
+          <p>Flow exports video, and LogoFade does not process video yet. For still images from Gemini, open the image tool and drop the original file.（答案占位草稿，文案以内容侧定稿为准）</p>
+        </details>
+        <details open>
+          <summary>
+            <h3>How to download flow video without watermark?</h3>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg>
+          </summary>
+          <p>There is currently no supported way to download a Flow video without its watermark, and this tool does not process video. Email us if you want video support.（占位草稿）</p>
+        </details>
+        <details open>
+          <summary>
+            <h3>How can I remove a watermark from Google?</h3>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg>
+          </summary>
+          <p>For a still image from Gemini: download the original file, drop it into the image tool, and download the clean result. It runs in your browser and is free.（占位草稿）</p>
+        </details>
+        <details open>
+          <summary>
+            <h3>How can I remove the watermark from a Veo 3 video?</h3>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg>
+          </summary>
+          <p>Not with this tool today: Veo 3 exports video, and only still images are supported. The invisible SynthID watermark is never touched, on images or video.（占位草稿）</p>
+        </details>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

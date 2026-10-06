@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>/google-flow-watermark-remover — 能力边界预览（LogoFade）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{ --background:#f9fbfa; --foreground:#111d1a; --card:#fff; --border:#dce5e3; }
+  body{ background:var(--background); color:var(--foreground);
+        font-family:"Geist",ui-sans-serif,system-ui,sans-serif;
+        -webkit-font-smoothing:antialiased; margin:0; }
+  .wrap{ max-width:1152px; margin:0 auto; padding:40px 16px; }
+  h2{ font-size:1.5rem; font-weight:600; letter-spacing:-0.025em; margin:0; }
+  .cols{ margin-top:24px; display:grid; gap:24px; }
+  @media (min-width:1024px){ .cols{ grid-template-columns:1fr 1fr; } }
+  .card{ border-radius:1rem; background:var(--card); padding:24px;
+         box-shadow:0 1px 2px rgb(0 0 0 / 0.05), inset 0 0 0 1px var(--border); }
+  h3{ font-size:1.125rem; font-weight:600; margin:0; }
+  ul{ list-style:disc; padding-left:24px; margin:16px 0 0; }
+  li{ margin-top:8px; line-height:1.75; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <section>
+      <h2>What LogoFade can and can't do today</h2>
+      <div class="cols">
+        <div class="card">
+          <h3>What it does today</h3>
+          <ul>
+            <li>Removes the visible Gemini star from still images, exactly reversing the blend Gemini applied.（占位草稿）</li>
+            <li>Runs 100% in your browser: images are never uploaded, and no account is needed.</li>
+            <li>Accepts original PNG, JPEG and WebP exports from Gemini, from 512 px up to 4K.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What it doesn't do yet</h3>
+          <ul>
+            <li>Flow, Veo and Omni video exports — video is not processed yet.（占位草稿）</li>
+            <li>SynthID, the invisible watermark Google embeds in the image itself.</li>
+            <li>Text labels, other companies' logos, and watermarks on images that were resized or re-saved.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>/google-flow-watermark-remover — H1 区预览（LogoFade）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{ --background:#f9fbfa; --foreground:#111d1a; --muted:#576b66;
+         --card:#fff; --border:#dce5e3; --teal-6:#6efcd90f; --teal-25:#6efcd940; }
+  body{ background:var(--background); color:var(--foreground);
+        font-family:"Geist",ui-sans-serif,system-ui,sans-serif;
+        -webkit-font-smoothing:antialiased; margin:0; }
+  .wrap{ max-width:672px; margin:0 auto; padding:40px 16px; }
+  @media (min-width:640px){ .wrap{ padding:64px 24px; } }
+  h1{ font-size:1.875rem; font-weight:600; letter-spacing:-0.025em; margin:0; }
+  @media (min-width:640px){ h1{ font-size:2.25rem; } }
+  .intro-card{ margin-top:24px; border-radius:1rem; background:var(--teal-6);
+               padding:24px; box-shadow:inset 0 0 0 1px var(--teal-25); }
+  .intro-card p{ margin:0; font-size:1.125rem; line-height:2rem; }
+  .btn-row{ margin-top:24px; display:flex; flex-wrap:wrap; gap:16px; }
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px;
+        border-radius:9999px; padding:10px 20px; font-size:1rem; font-weight:500;
+        text-decoration:none; }
+  .btn-primary{ background:var(--foreground); color:var(--background); }
+  .btn-outline{ background:var(--card); color:var(--foreground);
+                box-shadow:inset 0 0 0 1px var(--border); }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Google Flow Watermark Remover</h1>
+    <div class="intro-card">
+      <p>Google Flow exports video, and LogoFade does not process video yet. What it does today is remove the Gemini watermark from still images, 100% in your browser.（正文占位草稿，文案以内容侧定稿为准）</p>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="/">Open the image tool</a>
+      <a class="btn btn-outline" href="mailto:support@logofade.com">Email us about video support</a>
+    </div>
+  </main>
+</body>
+</html>
