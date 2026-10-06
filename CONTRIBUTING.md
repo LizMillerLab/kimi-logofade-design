@@ -31,6 +31,7 @@
 | `accent-teal` 实心档（无透明度） | 仅用于**不含文字**的填充与描边（进度条填充、推荐档 `ring-2`），**不得承载文字** |
 | `border-accent-teal/25` | 归入 25 档 = 细描边（`ring` / `border` 均可） |
 | `bg-foreground/5` | 中性提示底（警告条等）；**品牌提示不得使用**（品牌提示用 `accent-teal/6`） |
+| 页脚次要文字 `text-muted-foreground` | 现网 `text-zinc-600 dark:text-zinc-400` 为脚手架残留，逐步收编（只换颜色 token，布局 class 不动） |
 
 ### ⚠️ 硬规则
 
@@ -76,6 +77,7 @@
 - 标题与内容之间：`mt-6`；卡与卡之间：`gap-6`；非正文的块级堆叠：`space-y-4`（如 FAQ 卡片串、卡内小列表）；正文（`<p>` / `<ul>`）**一律不用 `space-y-*`，写在 Prose 里**
 - 段落之间：`mt-4`；H2 后首段：`mt-6`；列表上方：`[&_ul]:mt-4`
 - **正文间距不要用 `space-y-*`，一律写在 Prose 里**（如 `[&_p]:mt-4`、`[&_ul]:mt-4`）；`space-y-*` 只用于非正文的块级堆叠（如 FAQ 卡片串）
+- 按钮组：`flex flex-wrap gap-4`（主按钮 + 描边按钮并排时）
 
 ## 5. 文字
 

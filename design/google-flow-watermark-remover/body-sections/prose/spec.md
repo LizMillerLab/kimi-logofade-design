@@ -21,7 +21,7 @@
 | H2 后首段 | mt-6（手册「H2 后首段」档） |
 | 正文（4 个 p） | leading-7 text-foreground（手册正文档）；段落间距写在 Prose：[&_p]:mt-4（不用 space-y-*） |
 | 行内链接（1 处，回 /） | underline underline-offset-4（手册「链接」档） |
-| 页脚同行文字「LogoFade · Not affiliated with Google.」 | 与页脚「LogoFade」同行；字号档 text-sm，颜色档见待确认 |
+| 页脚同行文字「LogoFade · Not affiliated with Google.」 | 与页脚「LogoFade」同行；text-sm text-muted-foreground（手册 §1 补充登记已收编；只换颜色 token，布局 class 不动） |
 
 ## 新增文字
 | 位置 | 文字 | 标签要求 |
@@ -39,4 +39,4 @@
 - 全页合计：H1 1 / H2 5 / H3 12 / details 4（与 brief 一致，本块不增减）
 
 ## 待我确认
-- 页脚文字颜色：现网页脚为 `text-zinc-600`（zinc 不在手册色板内），手册最近值为 `text-muted-foreground`，请确认用哪一档。
+无（页脚文字色已按 `text-muted-foreground` 收编进手册 §1 补充登记；Header/Footer 边框 `border-zinc-200` 不在本次范围）
